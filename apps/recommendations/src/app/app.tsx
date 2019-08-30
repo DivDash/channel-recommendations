@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Message } from '@recommendation/api-interfaces';
+import Recommendations from './Components/Recommended_Channels';
 
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
@@ -13,12 +14,11 @@ export const App = () => {
   return (
     <>
       <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to recommendations!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
-        />
+        <h1>Channel Recommendations System!</h1>
       </div>
+      <>
+        <Recommendations/>
+      </>
       <div>{m.message}</div>
     </>
   );
