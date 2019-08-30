@@ -1,0 +1,24 @@
+{
+  "npmScope": "recommendation",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "recommendations": {
+      "tags": []
+    },
+    "recommendations-e2e": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    }
+  }
+}
