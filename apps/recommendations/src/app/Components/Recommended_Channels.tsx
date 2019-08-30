@@ -14,13 +14,20 @@ class Recommendations extends React.Component<RecommendationsProps, Recommendati
         this.state = { recommendationsList: [] };
     }
 
-    componentWillMount() {
-        fetch('/channel')
-            .then(r => r.json().then(res => {
-                this.setState({
-                    recommendationsList: res,
-                })
-            }))
+    componentDidMount() {
+        // fetch('/channel')
+        //     .then(r => r.json().then(res => {
+        const list: Array<Channel> = [];
+        for (let i = 0; i < 50; i++)
+          list.push({
+            name: `Channel ${i+1}`,
+            id: String(i),
+            userIds: []
+          });
+        this.setState({
+            recommendationsList: list,
+        })
+            // }))
     }
 
     render() {
@@ -31,7 +38,7 @@ class Recommendations extends React.Component<RecommendationsProps, Recommendati
                 <ul>{
                     recommendationsList && recommendationsList.map((item, index) => {
                         return (
-                            <li>{item.name}</li>
+                          <li key={item.id}>{item.name}</li>
                         )
                     })
                 }</ul>

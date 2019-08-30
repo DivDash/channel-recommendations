@@ -7,6 +7,7 @@ const app = express();
 const greeting: Message = { message: 'Welcome to api!' };
 
 app.get('/api', (req, res) => {
+  console.log(port);
   res.send(greeting);
 });
 
@@ -14,22 +15,22 @@ const channels: Array<Channel> = [
   {
     id: '312312',
     name: 'My channel',
-    likes: 123213
+    userIds: []
   },
   {
     id: '312312',
     name: 'My channel',
-    likes: 123213
+    userIds: []
   },
   {
     id: '312312',
     name: 'My channel',
-    likes: 123213
+    userIds: []
   },
   {
     id: '312312',
     name: 'My channel',
-    likes: 123213
+    userIds: []
   }
 ];
 

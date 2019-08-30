@@ -1,5 +1,5 @@
 export interface Channel {
     id: string;
     name: string;
-    likes: number;
+    userIds: Array<string>;
 }
